@@ -108,10 +108,10 @@ contract BossToken is Token {
     uint8 public decimals;
     string public symbol;
     
-    function BossToken(uint256 _initialAmount, uint8 _decimalUnits, string _tokenName, string _tokenSymbol, string initAddress) {
+    function BossToken(uint256 _initialAmount, uint8 _decimalUnits, string _tokenName, string _tokenSymbol, address _initAddress) {
         decimals = _decimalUnits;
         totalSupply = _initialAmount * 10**uint(decimals);
-        balances[initAddress] = totalSupply;
+        balances[_initAddress] = totalSupply;
         name = _tokenName;
         symbol = _tokenSymbol;
     }
